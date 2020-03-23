@@ -1,0 +1,148 @@
+/*
+Project Name: Jordan Loeser's Portfolio
+Author: Jordan Loeser
+Author URI: http://jordanloeser.com/
+Version:      1.0.0
+*/
+/* # Reset
+---------------------------------------------------------------------------------------------------- */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: #262317;
+  background: #f3f0e2;
+  font-family: "Lora"; }
+
+/* # Tarot
+---------------------------------------------------------------------------------------------------- */
+html, body {
+  height: 100%; }
+
+#spread {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  #spread section {
+    text-align: center; }
+  #spread .card {
+    position: relative;
+    height: 487px;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    background: #FFF;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-clip: padding-box;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
+    border: 10px solid #FFF; }
+    #spread .card .graphic {
+      position: relative;
+      height: 465px;
+      background-color: #f3f0e2; }
+      #spread .card .graphic svg {
+        position: absolute;
+        left: 0;
+        top: 0; }
+    #spread .card .label {
+      position: absolute;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      color: #FFF; }
+      #spread .card .label.v1 {
+        z-index: 51;
+        bottom: 12px;
+        left: 0;
+        right: 0;
+        padding: 10px 0px 0px;
+        margin: 0px 12px;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: #FFF;
+        border-radius: 100px 100px 0px 0px;
+        -webkit-border-radius: 100px 100px 0px 0px;
+        background-clip: padding-box; }
+      #spread .card .label.v2 {
+        z-index: 50;
+        width: 100px;
+        bottom: 15px;
+        left: 50%;
+        right: 0;
+        transform: translateX(-50%);
+        padding: 10px 0px 5px;
+        margin: 0;
+        font-size: .8em;
+        text-transform: uppercase;
+        color: #FFF;
+        border-radius: 100px 100px 0px 0px;
+        -webkit-border-radius: 100px 100px 0px 0px;
+        background-clip: padding-box;
+        background-color: #262317; }
+    #spread .card .name {
+      position: absolute;
+      font-size: 1.2em;
+      color: #FFF; }
+      #spread .card .name.v1 {
+        z-index: 51;
+        top: 12px;
+        left: 0;
+        right: 0;
+        padding: 0px 0px 10px;
+        margin: 0px 12px;
+        border-radius: 0px 0px 100px 100px;
+        -webkit-border-radius: 0px 0px 100px 100px;
+        background-clip: padding-box; }
+  #spread .mg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 50; }
+    #spread .mg_circles .cls-1 {
+      fill: #fdac18; }
+    #spread .mg_circles .cls-2 {
+      fill: #e82029; }
+    #spread .mg_circles .cls-3 {
+      fill: #195eab; }
+    #spread .mg_frame .cls-1 {
+      fill: #e82029; }
+  #spread .bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    background-image: url("../img/background/0.png"); }
+  #spread .fg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 100; }
+
+/*# sourceMappingURL=style.css.map */

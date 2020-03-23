@@ -1,0 +1,156 @@
+/* # Tarot
+---------------------------------------------------------------------------------------------------- */
+$z_background: 0;
+$z_midground: 50;
+$z_foreground: 100;
+
+html, body {
+    height: 100%;
+}
+
+#spread {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    section {
+        text-align: center;
+    }
+
+    .card {
+        position: relative;
+        $card_width: 300px;
+        $card_height: ($card_width * 1.55);
+        height: $card_height + 22px;
+        width: $card_width;
+        margin: 20px;
+        text-align: center;
+        background: $white;
+        @include border-radius(10px);
+        box-shadow: 7px 7px 5px rgba(0,0,0,0.2);
+        border: 10px solid $white;
+
+        .graphic {
+            position: relative;
+            height: $card_height;
+            background-color: $cream;
+            svg {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        .label {
+            position: absolute;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            color: $white;
+            &.v1 {
+                z-index: $z_midground + 1;
+                bottom: 12px;
+                left: 0;
+                right: 0;
+                padding: 10px 0px 0px;
+                margin: 0px 12px;
+                font-size: 1.2em;
+                text-transform: uppercase;
+                color: $white;
+                @include border-radius(100px 100px 0px 0px);
+            }
+            &.v2 {
+                z-index: $z_midground;
+                width: 100px;
+                bottom: 15px;
+                left: 50%;
+                right: 0;
+                transform: translateX(-50%);
+                padding: 10px 0px 5px;
+                margin: 0;
+                font-size: .8em;
+                text-transform: uppercase;
+                color: $white;
+                @include border-radius(100px 100px 0px 0px);
+                background-color: $black;
+            }
+        }
+
+        .name {
+            position: absolute;
+            font-size: 1.2em;
+            // text-transform: uppercase;
+            color: $white;
+            &.v1 {
+                z-index: $z_midground + 1;
+                top: 12px;
+                left: 0;
+                right: 0;
+                padding: 0px 0px 10px;
+                margin: 0px 12px;
+                @include border-radius(0px 0px 100px 100px);
+            }
+        }
+    }
+
+    .mg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: $z_midground;
+
+        &_circles {
+            & .cls-1 { // Middle
+                fill: $accent-2;
+            }
+            & .cls-2 { // Top
+                fill: $accent-3;
+            }
+            & .cls-3 { // Bottom
+                fill: $accent-1;
+            }
+        }
+        &_frame {
+            & .cls-1 {
+                fill: $accent-3;
+            }
+        }
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: $z_background;
+
+        // Below will change with js
+        background-image: url('../img/background/0.png');
+    }
+
+    .fg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: $z_foreground;
+
+        // Below will change with js
+        // background-image: url('../img/foreground/1.png');
+    }
+}
