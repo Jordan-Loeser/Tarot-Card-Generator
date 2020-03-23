@@ -9,3 +9,6 @@ TODO
 *.css.map
 *.sass.map
 *.scss.map
+
+vendor/
+.env
