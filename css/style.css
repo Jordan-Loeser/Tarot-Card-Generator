@@ -92,6 +92,7 @@ html, body {
         background-clip: padding-box;
         background-color: #262317; }
     #spread .card .name {
+      display: none;
       position: absolute;
       font-size: 1.2em;
       color: #FFF; }
