@@ -1,0 +1,84 @@
+/* # Tarot
+---------------------------------------------------------------------------------------------------- */
+$z_background: 0;
+$z_midground: 50;
+$z_foreground: 100;
+
+html, body {
+    height: 100%;
+}
+
+#spread {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    section {
+        text-align: center;
+    }
+
+    .card {
+        position: relative;
+        $card_width: 300px;
+        $card_height: ($card_width * 1.55);
+        height: $card_height + 22px;
+        width: $card_width;
+        margin: 20px;
+        text-align: center;
+        background: $white;
+        @include border-radius(10px);
+        box-shadow: 7px 7px 5px rgba(0,0,0,0.2);
+        border: 10px solid $white;
+
+        .graphic {
+            position: relative;
+            height: $card_height;
+            // background-color: $black;
+        }
+    }
+
+    .mg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: $z_midground;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: $z_background;
+
+        // Below will change with js
+        background-image: url('../img/backgrounds/1.png');
+    }
+
+    .fg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: $z_foreground;
+
+        // Below will change with js
+        // background-image: url('../img/foreground/1.png');
+    }
+}
