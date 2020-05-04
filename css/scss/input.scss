@@ -9,4 +9,48 @@ Version:      1.0.0
 @import 'partials/variables';
 @import 'partials/reset';
 @import 'partials/mixins';
-@import 'partials/tarot';
+
+.container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background: $cream;
+    .half {
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        &.people {
+            background-color: $blue;
+            a {
+                color: $yellow;
+            }
+            h3 {
+                color: $pink;
+            }
+        }
+        &.animals {
+            background-color: $cream;
+            a {
+                color: $black;
+            }
+            h3 {
+                color: $orange;
+            }
+        }
+        a {
+            font-size: 2em;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+}
