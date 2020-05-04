@@ -1,0 +1,43 @@
+
+// # Variables
+//---------------------------------------------------------------------------------------------------- */
+
+// THEME COLORS
+$white: #FFF;
+$black: #262317;
+$accent-1: #195eab;
+$accent-2: #fdac18;
+$accent-3: #e82029;
+$cream: #f3f0e2;
+
+// THEME COLORS
+$main-color: $black;
+$dark-color: darken($main-color, 50%);
+$background-color: $cream;
+
+// THEME FONTS
+$main-font: 'Lora', ;
+$header-font: 'Lora', ;
+$main-font-color: $main-color;
+
+// HEADERS
+$header-color: $main-color;
+
+//----------------------------------------------------------//
+//    BREAKPOINTS                                           //
+//    -------------------------------------------------     //
+//    EXTRA SMALL DEVICES                    ie. phones     //
+      $xs: 767px;                                           //
+//    -------------------------------------------------     //
+//    SMALL DEVICES                         ie. tablets     //
+      $sm: 768px;                                           //
+//    -------------------------------------------------     //
+//    MEDIUM DEVICES                       ie. desktops     //
+      $md: 992px;                                           //
+//    -------------------------------------------------     //
+//    LARGE DEVICES                         ie. largest     //
+      $lg: 1200px;                                          //
+//    -------------------------------------------------     //
+//----------------------------------------------------------//
+
+$gutter-width: 30px;

@@ -17,7 +17,7 @@ const pallete = {
     }
 }
 
-var backgrounds = [0, 1, 4];
+var backgrounds = [0, 1, 2, 3, 4];
 var foregrounds = [
     'Baboon',
     'Giraffe',
